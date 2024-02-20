@@ -1,0 +1,123 @@
+@import url("normalizer.css");
+
+:root {
+  /* Colors */
+  --yellow: hsl(47, 88%, 63%);
+
+  /* ### Primary */
+
+  /* ### Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
+
+  /* Font family */
+  --figtree: "Figtree", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--figtree);
+  margin-top: 155px;
+}
+
+.preview-card {
+  background-color: var(--white);
+  max-width: 327px;
+  border-radius: 20px;
+  border: 1px solid var(--black);
+  padding: 24px;
+  box-shadow: 7px 8px 0px -1px var(--black);
+}
+
+.preview-card__header {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.preview-card__header .preview-card__img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.preview-card__header .preview-card__article {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.preview-card__header .preview-card__bagde {
+  background-color: var(--yellow);
+  padding: 5px;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 12px;
+  width: 73px;
+  text-align: center;
+}
+
+.preview-card__header .preview-card__date {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.preview-card__body {
+  margin-bottom: 24px;
+}
+
+.preview-card__body h1 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 12px 0;
+}
+
+.preview-card__body h1:hover {
+  cursor: pointer;
+  color: var(--yellow);
+  transition: 300ms;
+}
+.preview-card__body .preview-card__description {
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+.preview-card__footer {
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.preview-card__footer .preview-card__avatar-img {
+  width: 32px;
+}
+.attribution {
+  margin-top: 50px;
+}
+
+@media (min-width: 764px) {
+  .preview-card {
+    max-width: 384px;
+  }
+
+  .preview-card__body h1 {
+    font-size: 22px;
+  }
+
+  .preview-card__body .preview-card__description {
+    font-size: 16px;
+  }
+}
